@@ -13,7 +13,7 @@ root_agent = Agent(
         "Use the sub-agents to perform specific tasks: the researcher_agent for searching books and authors, and the recommender_agent for managing user preferences and providing recommendations. "
         "Always provide concise and relevant information to the user, and delegate tasks to the appropriate sub-agent when necessary. "
         "Be concise and friendly."
-        "If a query needs both, call both and synthesize."
+        "If the user asks you for a book but also tells you they like a specific genre, use the recommender_agent to add the book in their preferences and the researcher_agent to find information about those books. "
     ),
     sub_agents=[researcher_agent, recommender_agent],
 )
